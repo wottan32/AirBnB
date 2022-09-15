@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+  
+
+  
+  <section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+              <div class="page-title probootstrap-animate">
+                  <div class="probootstrap-breadcrumbs">
+                    <a href="#">Inicio</a><span><a href="{% url 'propiedad:lista_propiedad' %}"> Propiedades </a></span>{{detalles_propiedad}}
+                  </div>
+                  <h1>{{detalles_propiedad}}</h1>
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url('/static/img/slider_1.jpg');"></li>
+      <li style="background-image: url('/static/img/slider_4.jpg');"></li>
+      <li style="background-image: url('/static/img/slider_2.jpg');"></li>
+    </ul>
+  </section>
+  <!-- END: slider  -->
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><img src="{{detalles_propiedad.imagen.url}}" class="img-responsive" alt="Free Bootstrap Template by uicookies.com"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Detalles</h2>
+
+          <p>Tipo : {{detalles_propiedad.tipo_propiedad }}</p>
+          <p>Area : {{detalles_propiedad.area}} m2</p>
+          <p>Camas : {{detalles_propiedad.numero_camas }}</p>
+          <p>Baños : {{detalles_propiedad.numero_banos }}</p>
+          <p>Estacionamientos : {{detalles_propiedad.numero_estacionamiento }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Reserva esta propiedad</h2>
+              <form action="" method="POST">
+                {% csrf_token %}
+                  {% bootstrap_form reserva_form %}
+                  {% buttons %}
+                      <button type="submit" class="btn btn-primary">Reserva</button>
+                  {% endbuttons %}
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% endblock body %}
