@@ -24,7 +24,7 @@
       </div>
     </div>
     <ul class="slides">
-      <li style="background-image: url('/static/img/slider_1.jpg');"></li>
+      <li style="background-image: url('static/img/slider_1.jpg');"></li>
       <li style="background-image: url('/static/img/slider_4.jpg');"></li>
       <li style="background-image: url('/static/img/slider_2.jpg');"></li>
     </ul>
@@ -37,7 +37,7 @@
         <div class="col-md-8">
           <form method="post" class="probootstrap-form mb60">
             {% csrf_token %}
-            {{contact_form}}
+            {{contacto_form}}
             <div class="form-group">
               <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Enviar Mensaje">
             </div>
@@ -47,7 +47,7 @@
           <h4>Detalles de Contacto</h4>
           <ul class="with-icon colored">
             <li><i class="icon-location2"></i> <span>Terragona 1910, Las Condes Region Metropolitana</span></li>
-            <li><i class="icon-phone2"></i><span>{{contactdetails.phone_number}}</span></li>
+            <li><i class="icon-phone2"></i><span>{{contactodetalles.numero_contacto}}</span></li>
           </ul>
 
           <h4>Retroalimentación</h4>

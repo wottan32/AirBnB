@@ -17,7 +17,7 @@ def lista_propiedad(request):
         print(tipo_propiedad)
         lista_propiedad = lista_propiedad.filter(
             Q(name__icontains=address_query) &
-            Q(tipo_propiedad__icontains=tipo_propiedad[0])
+            Q(tipo_propiedad__icontains=tipo_propiedad[1])
         ).distinct()
 
     print(lista_propiedad)

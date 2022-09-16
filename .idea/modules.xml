@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Build-Hotel-Site-With-Python-Django.iml" filepath="$PROJECT_DIR$/.idea/Build-Hotel-Site-With-Python-Django.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FairBnB.iml" filepath="$PROJECT_DIR$/.idea/FairBnB.iml" />
     </modules>
   </component>
 </project>
