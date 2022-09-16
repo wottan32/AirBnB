@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>uiCookies:Kasa &mdash; Free </title>
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src='/static/js/vendor/html5shiv.min.js'></script>
+      <script src='/static/js/vendor/respond.min.js'></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- START: header -->
+  
+  <div class="probootstrap-loader"></div>
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+        <a href="index.html" class="probootstrap-logo">Kasa<span>.</span></a>
+        
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li {% if category_list_home %} class="active"{% endif %}><a href="/">Inicio</a></li>
+            <li {% if lista_propiedad %} class="active"{% endif %}><a href="{% url 'propiedad:lista_propiedad' %}">Propiedades</a></li>
+            <li {% if lista_agente %} class="active"{% endif %}><a href="{% url 'agentes:lista_agente' %}">Agentes</a></li>
+            <li {% if acerca %} class="active"{% endif %}><a href="{% url 'acerca:acerca' %}">Acerca</a></li>
+            <li {% if contactdetails %} class="active"{% endif %}><a href="{% url 'contacto:send_mail' %}">Contacto</a></li>
+          </ul>
+          <div class="extra-text visible-xs"> 
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Dirección</h5>
+            <p>Parinacota 1692, Las Condes</p>
+            <h5>Conectar</h5>
+            <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook2"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+
+
+  
+  {% block body %}
+    
+  {% endblock body %}
+    
+
+  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url('/static/img/slider_3.jpg')">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Acerca de Kasa.</h4>
+            <p>Pretendemos ser la mayor comunidad de arriendo de propiedades por dia y por semana. </p>
+            <p><a href="#">Lee más...</a></p>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Links</h4>
+            <ul class="stack-link">
+              <li><a href="#">Listados de Propiedades</a></li>
+              <li><a href="#">Propiedades en arriendo</a></li>
+              <li><a href="#">Propiedades a la venta</a></li>
+              <li><a href="#">Agentes</a></li>
+              <li><a href="#">Testimonios</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Ciudades populares</h4>
+            <ul class="stack-link">
+              <li><a href="#">Chiloe <small>(32 propiedades)</small></a></li>
+              <li><a href="#">Viña del Mar <small>(294 propiedades)</small></a></li>
+              <li><a href="#">La Serena <small>(100 propiedades)</small></a></li>
+              <li><a href="#">Puerto Varas <small>(8 propiedades)</small></a></li>
+              <li><a href="#">Iquique <small>(42 propiedades)</small></a></li>
+            </ul>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Subscribirse</h4>
+            <p>Manténgase informado de las principales oportunidades y ofertas</p>
+            <form action="#">
+              <div class="form-field">
+                  <label>
+                      <input type="text" class="form-control" placeholder="Enter your email">
+                  </label>
+                  <button class="btn btn-subscribe">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2017 <a href="https://uicookies.com/">uiCookies:Haus</a>. Designed by <a href="https://uicookies.com/">uicookies.com</a> <br> Demo Photos from <a href="https://pixabay.com/">Pixabay</a> &amp; <a href="https://unsplash.com/">Unsplash</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+  
+
+  <script src="{% static 'js/scripts.min.js' %}"></script>
+  <script src="{% static 'js/main.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+</html>
