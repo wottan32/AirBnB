@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 from pathlib import Path
 
+from django.contrib.staticfiles.templatetags import staticfiles
+
 # if os.name == 'nt':
 #    import platform
 
@@ -153,7 +155,8 @@ USE_L10N = True
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'staticfiles')
+# STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
