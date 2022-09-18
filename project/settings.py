@@ -25,9 +25,9 @@ from pathlib import Path
 #    os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
 #    os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
 
-GDAL_LIBRARY_PATH = r'C:\Users\mario\PycharmProjects\AirBnB\venv\Lib\site-packages\osgeo\gdal303.dll'
-GDAL_DATA = r'C:\Users\mario\PycharmProjects\AirBnB\venv\Lib\site-packages\osgeo\data\gdal'
-GDAL_DIVER_PATH = r'C:\Users\mario\PycharmProjects\AirBnB\venv\Lib\site-packages\osgeo\gdalplugins'
+GDAL_LIBRARY_PATH = r'C:\Users\mario\PycharmProjects\FairBnB\venv\Lib\site-packages\osgeo\gdal303.dll'
+# GDAL_DATA = r'C:\Users\mario\PycharmProjects\AirBnB\venv\Lib\site-packages\osgeo\data\gdal'
+# GDAL_DIVER_PATH = r'C:\Users\mario\PycharmProjects\AirBnB\venv\Lib\site-packages\osgeo\gdalplugins'
 GEOS_LIBRARY_PATH = r'C:\OSGeo4W\bin\geos_c.dll'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
