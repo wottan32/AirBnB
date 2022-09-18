@@ -25,10 +25,10 @@ from pathlib import Path
 #    os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
 #    os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
 
-GDAL_LIBRARY_PATH = r'C:\Users\mario\PycharmProjects\Build-Hotel-Site-With-Python-Django\venv\Lib\site-packages\osgeo' \
+GDAL_LIBRARY_PATH = r'C:\Users\mario\PycharmProjects\FairBnB\venv\Lib\site-packages\osgeo' \
                     r'\gdal303.dll '
-GDAL_DATA = r'C:\Users\mario\PycharmProjects\Build-Hotel-Site-With-Python-Django\venv\Lib\site-packages\osgeo\data\gdal'
-GDAL_DIVER_PATH = r'C:\Users\mario\PycharmProjects\Build-Hotel-Site-With-Python-Django\venv\Lib\site-packages\osgeo' \
+GDAL_DATA = r'C:\Users\mario\PycharmProjects\FairBnB\venv\Lib\site-packages\osgeo\data\gdal'
+GDAL_DIVER_PATH = r'C:\Users\mario\PycharmProjects\FairBnB\venv\Lib\site-packages\osgeo' \
                   r'\gdalplugins '
 GEOS_LIBRARY_PATH = r'C:\OSGeo4W\bin\geos_c.dll'
 
@@ -110,6 +110,10 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+
+# models do not have primary keys. But they are being created automatically by django.
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # POSTGIS_TEMPLATE = 'postgres'
 
