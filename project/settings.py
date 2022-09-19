@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 from pathlib import Path
 
-from django.contrib.staticfiles.templatetags import staticfiles
+# from django.contrib.staticfiles.templatetags.staticfiles import static
 
 # if os.name == 'nt':
 #    import platform
@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django.contrib.sites',
     'bootstrap4',
     'django.contrib.gis',
     'propiedad',
@@ -93,7 +92,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
+# WSGI_APPLICATION = 'project.wsgi.application'
+
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -110,7 +110,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 
 # models do not have primary keys. But they are being created automatically by django.
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -155,8 +154,7 @@ USE_L10N = True
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'staticfiles')
-# STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
@@ -165,7 +163,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'test@gmail.com'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSOWRD = ''
