@@ -44,7 +44,7 @@ SECRET_KEY = '1dpy6wb=b7@6nkb1z!7e%jo=pla90-t_=)h*vlt$@!f%m!4mt!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fairbnb-cl.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'fairbnb-cl.herokuapp.com']
 
 # Application definition
 
@@ -153,11 +153,11 @@ USE_L10N = True
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root', 'static')
 
-# STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static'),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
