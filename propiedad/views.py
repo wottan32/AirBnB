@@ -29,11 +29,12 @@ def lista_propiedad(request):
     return render(request, template, context)
 
 
-def detalles_propiedad(request):
+def detalles_propiedad(request, id):
     # propiedad = Propiedad.objects.get(id=id)
     detalles_propiedad = Propiedad.objects.get(id=id)
 
     template = 'propiedad/detalle.html'
+    # template = 'propiedad/int:id.html'
 
     if request.method == 'POST':
         reserva_form = ReservaForm(request.POST)
@@ -43,6 +44,7 @@ def detalles_propiedad(request):
         reserva_form = ReservaForm()
 
     context = {
+        # 'propiedad': propiedad,
         'detalles_propiedad': detalles_propiedad,
         'reserva_form': reserva_form
     }
